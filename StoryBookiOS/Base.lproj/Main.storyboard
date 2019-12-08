@@ -14,7 +14,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Po5-6y-wJS">
+                                <rect key="frame" x="40" y="732" width="334" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOW-Kw-yab">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="30"/>
+                                        <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <segue destination="JcG-DX-NdW" kind="show" id="F2a-hQ-Xwi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmE-7o-9TZ">
+                                        <rect key="frame" x="0.0" y="50" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="c6s-Gy-BMS"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <segue destination="gjZ-t1-Rak" kind="show" id="gip-UE-XW3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SmE-7o-9TZ" firstAttribute="height" secondItem="GOW-Kw-yab" secondAttribute="height" multiplier="1.33333" id="yD6-Um-4l0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Po5-6y-wJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="2N2-2V-mmB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Po5-6y-wJS" secondAttribute="trailing" constant="40" id="HTd-AI-uZK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Po5-6y-wJS" secondAttribute="bottom" constant="40" id="bCA-Zv-KQs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9UV-LU-Xn0"/>
@@ -33,10 +65,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cdg-qg-DWi"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5Xy-UD-tAp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd1-cU-Gp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="61"/>
+            <point key="canvasLocation" x="1741" y="-298"/>
         </scene>
         <!--Sign Up Controller-->
         <scene sceneID="9Dl-Eg-SGd">
@@ -48,10 +81,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xs8-3V-cNk"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GGM-uS-Tv6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVM-RA-lE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425" y="11"/>
+            <point key="canvasLocation" x="1796" y="391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9fJ-cC-s3q">
