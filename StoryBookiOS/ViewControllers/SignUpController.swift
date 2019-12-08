@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpController: UIViewController {
 
@@ -41,11 +42,28 @@ class SignUpController: UIViewController {
         return nil
         
     }
+    func showerror(_ message:String){
+        ErrorLabel.text=message
+        ErrorLabel.alpha=1
+
+    }
     @IBAction func SignUpTapped(_ sender: Any) {
         let error = ValidateFields()
         if error != nil {
-            ErrorLabel.text=error
-            ErrorLabel.alpha=90
+            showerror(error!)
+        }
+        else{
+            setUpViews()
+            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>) { (result, err) in
+                //handle error
+                
+                if err != nil{
+                    self.showerror("Sorry could not create user")
+                }
+                else{
+                    
+                }
+            }
         }
     }
     
