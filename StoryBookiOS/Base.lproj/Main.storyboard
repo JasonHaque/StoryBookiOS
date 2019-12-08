@@ -166,6 +166,9 @@
                                             <constraint firstAttribute="height" constant="40" id="zz8-Qy-cZJ"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="SignUpTapped:" destination="gjZ-t1-Rak" eventType="touchUpInside" id="gUS-Rg-Ri3"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eR0-9Z-uk1">
                                         <rect key="frame" x="0.0" y="330" width="334" height="20.5"/>
@@ -189,6 +192,14 @@
                         <viewLayoutGuide key="safeArea" id="xs8-3V-cNk"/>
                     </view>
                     <navigationItem key="navigationItem" id="GGM-uS-Tv6"/>
+                    <connections>
+                        <outlet property="ConfirmPassword" destination="xp5-SN-tc7" id="NGI-tv-JUH"/>
+                        <outlet property="EmailAddressField" destination="AVd-9e-YC8" id="QcT-OM-WA2"/>
+                        <outlet property="ErrorLabel" destination="eR0-9Z-uk1" id="sD4-kx-Hz0"/>
+                        <outlet property="FirstNameField" destination="GRq-8D-ZpH" id="a51-gg-4RY"/>
+                        <outlet property="LastNameField" destination="MNZ-8t-DEj" id="aYE-aW-8Fn"/>
+                        <outlet property="PasswordField" destination="udY-uk-ELB" id="D5y-lU-WwR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVM-RA-lE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
