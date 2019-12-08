@@ -29,7 +29,18 @@ class SignUpController: UIViewController {
         ErrorLabel.alpha=0
     }
 
-    
+    func ValidateField()-> String?{
+        
+        if( FirstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" || LastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""  ||
+            EmailAddressField.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" ||
+            PasswordField.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" ||
+            ConfirmPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""){
+            return "fill in the fields properly"
+        }
+        
+        return nil
+        
+    }
     @IBAction func SignUpTapped(_ sender: Any) {
     }
     
