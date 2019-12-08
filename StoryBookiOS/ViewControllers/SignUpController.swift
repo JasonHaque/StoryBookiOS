@@ -29,7 +29,7 @@ class SignUpController: UIViewController {
         ErrorLabel.alpha=0
     }
 
-    func ValidateField()-> String?{
+    func ValidateFields()-> String?{
         
         if( FirstNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" || LastNameField.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""  ||
             EmailAddressField.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" ||
@@ -42,6 +42,11 @@ class SignUpController: UIViewController {
         
     }
     @IBAction func SignUpTapped(_ sender: Any) {
+        let error = ValidateFields()
+        if error != nil {
+            ErrorLabel.text=error
+            ErrorLabel.alpha=90
+        }
     }
     
 }
