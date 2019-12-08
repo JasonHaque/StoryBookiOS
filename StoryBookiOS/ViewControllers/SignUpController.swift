@@ -54,7 +54,7 @@ class SignUpController: UIViewController {
         }
         else{
             setUpViews()
-            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>) { (result, err) in
+            Auth.auth().createUser(withEmail: "mail", password: "1234567") { (result, err) in
                 //handle error
                 
                 if err != nil{
