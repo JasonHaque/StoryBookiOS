@@ -82,6 +82,9 @@
                                             <constraint firstAttribute="height" constant="40" id="MD5-9C-fHU"/>
                                         </constraints>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="LoginTapped:" destination="JcG-DX-NdW" eventType="touchUpInside" id="sXH-ij-zCf"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQA-hi-LIw">
                                         <rect key="frame" x="0.0" y="168" width="334" height="20.5"/>
@@ -104,6 +107,11 @@
                         <viewLayoutGuide key="safeArea" id="cdg-qg-DWi"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Xy-UD-tAp"/>
+                    <connections>
+                        <outlet property="EmailAddress" destination="nGP-5p-ZVV" id="Bdu-ei-TAN"/>
+                        <outlet property="LoginErrorLabel" destination="yQA-hi-LIw" id="KmE-4l-Aut"/>
+                        <outlet property="Password" destination="zUB-XA-QGv" id="DZ1-FF-2RP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd1-cU-Gp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
