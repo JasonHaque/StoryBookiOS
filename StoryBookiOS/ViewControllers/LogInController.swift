@@ -18,8 +18,11 @@ class LogInController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpViews()
         // Do any additional setup after loading the view.
+    }
+    func setUpViews(){
+        LoginErrorLabel.alpha=0
     }
     
 

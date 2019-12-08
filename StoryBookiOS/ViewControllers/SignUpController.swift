@@ -22,10 +22,12 @@ class SignUpController: UIViewController {
     @IBOutlet weak var ErrorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpViews()
         // Do any additional setup after loading the view.
     }
-    
+    func setUpViews(){
+        ErrorLabel.alpha=0
+    }
 
     
     @IBAction func SignUpTapped(_ sender: Any) {
