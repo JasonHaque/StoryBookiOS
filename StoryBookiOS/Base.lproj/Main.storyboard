@@ -120,7 +120,7 @@
         <!--Home View Controller-->
         <scene sceneID="A2J-X3-kZA">
             <objects>
-                <viewController id="KZZ-3q-s1o" customClass="HomeViewController" customModule="StoryBookiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="KZZ-3q-s1o" customClass="HomeViewController" customModule="StoryBookiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9gn-Jn-Nvs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

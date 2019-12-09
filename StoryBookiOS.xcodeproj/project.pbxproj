@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964E0FD3239EC4F9003BC6A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E0FD2239EC4F9003BC6A0 /* Constants.swift */; };
 		96EEA51B2396B1C800D33FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEA51A2396B1C800D33FE1 /* AppDelegate.swift */; };
 		96EEA51D2396B1C800D33FE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEA51C2396B1C800D33FE1 /* SceneDelegate.swift */; };
 		96EEA51F2396B1C800D33FE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EEA51E2396B1C800D33FE1 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4FBEB1EAF534B9CA71E4878D /* Pods_StoryBookiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryBookiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		964E0FD2239EC4F9003BC6A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96EEA5172396B1C800D33FE1 /* StoryBookiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryBookiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EEA51A2396B1C800D33FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EEA51C2396B1C800D33FE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +66,15 @@
 				C9CE43B75FB20A10422D734F /* Pods-StoryBookiOS.debug.xcconfig */,
 				A251AFA68F685C038798F246 /* Pods-StoryBookiOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		964E0FD1239EC4D9003BC6A0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				964E0FD2239EC4F9003BC6A0 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		96EEA50E2396B1C800D33FE1 = {
@@ -89,6 +98,7 @@
 		96EEA5192396B1C800D33FE1 /* StoryBookiOS */ = {
 			isa = PBXGroup;
 			children = (
+				964E0FD1239EC4D9003BC6A0 /* Helpers */,
 				96EEA52E2396B2B900D33FE1 /* ViewControllers */,
 				96EEA51A2396B1C800D33FE1 /* AppDelegate.swift */,
 				96EEA51C2396B1C800D33FE1 /* SceneDelegate.swift */,
@@ -232,6 +242,7 @@
 				96EEA51F2396B1C800D33FE1 /* ViewController.swift in Sources */,
 				96EEA5302396B33C00D33FE1 /* LogInController.swift in Sources */,
 				96EEA51B2396B1C800D33FE1 /* AppDelegate.swift in Sources */,
+				964E0FD3239EC4F9003BC6A0 /* Constants.swift in Sources */,
 				96EEA51D2396B1C800D33FE1 /* SceneDelegate.swift in Sources */,
 				96EEA534239CCF3E00D33FE1 /* HomeViewController.swift in Sources */,
 			);
