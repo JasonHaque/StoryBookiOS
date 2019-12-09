@@ -73,8 +73,13 @@ class SignUpController: UIViewController {
                         }
                     }
                 }
+                
+                self.transitionHome()
             }
         }
+    }
+    func transitionHome(){
+        
     }
     
 }

@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Constants {
+    struct Storyboard {
+        let homeViewController = "HomeVC"
+    }
+}
