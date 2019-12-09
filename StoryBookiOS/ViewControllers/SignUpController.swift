@@ -79,7 +79,9 @@ class SignUpController: UIViewController {
         }
     }
     func transitionHome(){
-        
+       let homeView = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        view.window?.rootViewController = homeView
+        view.window?.makeKeyAndVisible()
     }
     
 }
