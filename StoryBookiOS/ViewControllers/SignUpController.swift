@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class SignUpController: UIViewController {
 
@@ -53,15 +54,24 @@ class SignUpController: UIViewController {
             showerror(error!)
         }
         else{
+            let firtName = FirstNameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = LastNameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = EmailAddressField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = PasswordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             setUpViews()
-            Auth.auth().createUser(withEmail: "mail", password: "1234567 ") { (result, err) in
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 //handle error
                 
                 if err != nil{
                     self.showerror("Sorry could not create user")
                 }
                 else{
-                    
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["firstName":firtName,"LastName":lastName,"uid":result!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showerror("User not generated")
+                        }
+                    }
                 }
             }
         }
