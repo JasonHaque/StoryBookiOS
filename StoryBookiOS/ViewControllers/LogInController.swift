@@ -39,7 +39,15 @@ class LogInController: UIViewController {
             setUpViews()
             let email = EmailAddress.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
+            Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                if err != nil {
+                    self.showError("Could not log in with this user")
+                    
+                }
+                else{
+                    self.transitionHome()
+                }
+            }
             
         }
         
@@ -57,5 +65,9 @@ class LogInController: UIViewController {
         }
         return nil
     }
-    
+    func transitionHome(){
+        let homeView = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        view.window?.rootViewController = homeView
+        view.window?.makeKeyAndVisible()
+    }
 }
