@@ -28,6 +28,29 @@ class LogInController: UIViewController {
 
     
     @IBAction func LoginTapped(_ sender: Any) {
+        let error = validateFields()
+        if error != nil{
+            showError(error!)
+        }
+        else{
+            setUpViews()
+            let email = EmailAddress.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = Password.text!.trimmingCharacters(in: <#T##CharacterSet#>)
+        }
+        
+    }
+    
+    func showError(_ message:String){
+        LoginErrorLabel.text=message
+        LoginErrorLabel.alpha=1
+    }
+    
+    func validateFields()-> String? {
+        if EmailAddress.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" ||
+            Password.text?.trimmingCharacters(in: .whitespacesAndNewlines)==""{
+            return "Fill up the fields properly"
+        }
+        return nil
     }
     
 }
