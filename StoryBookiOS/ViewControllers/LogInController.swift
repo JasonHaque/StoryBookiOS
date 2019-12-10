@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
 
 class LogInController: UIViewController {
 
@@ -35,7 +38,9 @@ class LogInController: UIViewController {
         else{
             setUpViews()
             let email = EmailAddress.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = Password.text!.trimmingCharacters(in: <#T##CharacterSet#>)
+            let password = Password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            
         }
         
     }
