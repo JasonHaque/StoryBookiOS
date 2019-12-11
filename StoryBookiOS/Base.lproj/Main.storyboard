@@ -136,6 +136,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="teB-6s-E9q"/>
                     </view>
+                    <connections>
+                        <outlet property="UserLabel" destination="gGW-CB-GrF" id="jJ7-aH-OpU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Qs-NV-yf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

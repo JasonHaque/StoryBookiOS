@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var UserLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserLabel.text = Auth.auth().currentUser?.email
 
         // Do any additional setup after loading the view.
     }
